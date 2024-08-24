@@ -119,10 +119,10 @@ function load_credits(){
     <div class='credits'>
         <h1>Life and Death</h1>
         <h2>Created by: Mrlwitwma</h2>
-        <img src="/other/life.gif" class="life">
-        <img src="/other/death.gif" class="death">
+        <img src="other/life.gif" class="life">
+        <img src="other/death.gif" class="death">
     </div>`
-    audioPlayer.setAttribute('src', "/audios/credits.mp3")
+    audioPlayer.setAttribute('src', "audios/credits.mp3")
     increase_audio(audioPlayer, 500)
     audioPlayer.loop = true
     audioPlayer.play()
@@ -164,7 +164,7 @@ function load_entity(id){
     const entity = document.createElement('div');
     const entityImg = document.createElement('img');
     if (id === 0){
-        entityImg.setAttribute('src', '/characters/dead/stable.gif');
+        entityImg.setAttribute('src', 'characters/dead/stable.gif');
     }
     entity.append(entityImg)
     display.append(entity);
