@@ -202,7 +202,7 @@ class Character {
         const modelImg = document.createElement('img');
         if (id == 0) {
             this.modelName = 'alex';
-            modelImg.setAttribute('src', `/characters/${this.modelName}/stable.gif`);
+            modelImg.setAttribute('src', `characters/${this.modelName}/stable.gif`);
             mainCharacter.innerHTML = `<span class='name'> ${name} </span>`;
             model.append(modelImg);
             mainCharacter.append(model);
@@ -298,26 +298,26 @@ class Character {
             if (!audioPlayer.paused) {
                 audioPlayer.pause();
             }
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/stable.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/stable.gif`);
         } else if (action === 1 && !this.modelImg.src.includes('jump.gif')) {
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/jump.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/jump.gif`);
             setTimeout(() => this.action(0), 2000); // Switch back to stable after 2 seconds
         } else if (action === 2 && !this.modelImg.src.includes('walk.gif')) {
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/walk.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/walk.gif`);
             audioPlayer.setAttribute('src', 'audios/walk.mp3');
             audioPlayer.loop = true;
             audioPlayer.play();
         } else if (action === 3 && !this.modelImg.src.includes('run.gif')) {
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/run.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/run.gif`);
             if (!audioPlayer.paused) {
                 audioPlayer.pause();
             }
         } else if (action === 4 && !this.modelImg.src.includes('attack.gif')) {
             audioPlayer.pause();
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/attack.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/attack.gif`);
             setTimeout(() => this.action(0), 800);
         } else if (action === 5 && !this.modelImg.src.includes('death.gif')) {
-            this.modelImg.setAttribute('src', `/characters/${this.modelName}/death.gif`);
+            this.modelImg.setAttribute('src', `characters/${this.modelName}/death.gif`);
         }
     }
     update_level(hint){
